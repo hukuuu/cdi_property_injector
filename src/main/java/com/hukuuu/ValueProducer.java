@@ -5,10 +5,11 @@ import java.util.Map;
 import java.util.ResourceBundle;
 
 import javax.annotation.PostConstruct;
+import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.inject.Produces;
 import javax.enterprise.inject.spi.InjectionPoint;
 
-
+@ApplicationScoped
 public class ValueProducer {
 	
 	private Map<String, ResourceBundle> bundles;
