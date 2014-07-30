@@ -13,21 +13,28 @@ public class App
 {
 	
 	@Inject
-	@Value(key="string")
+	@Value(bundle="config", key="string")
 	private String str;
 	
 	@Inject
-	@Value(key="double")
+	@Value(bundle="config", key="double")
 	private Double dbl;
 
 	@Inject
-	@Value(key="int")
+	@Value(bundle="config", key="int")
 	private Integer integ;
 
 	@Inject
-	@Value(key="boolean")
+	@Value(bundle="config", key="boolean")
 	private Boolean bool;
 	
+	@Inject
+	@Value(bundle="monfig", key="integer")
+	private Integer i;
+	
+	@Inject
+	@Value(bundle="monfig", key="nested.value")
+	private String s;
 	
 	public void init(@Observes ContainerInitialized event)
     {
@@ -35,6 +42,8 @@ public class App
 		System.out.println(dbl);
 		System.out.println(integ);
 		System.out.println(bool);
+		System.out.println(i);
+		System.out.println(s);
     }
 
 }

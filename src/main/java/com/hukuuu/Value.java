@@ -10,4 +10,5 @@ import javax.enterprise.util.Nonbinding;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Value {
 	@Nonbinding String key() default "";
+	@Nonbinding String bundle() default "";
 }
